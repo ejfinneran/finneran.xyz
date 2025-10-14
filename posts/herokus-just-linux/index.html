@@ -1,205 +1,7 @@
-<!DOCTYPE html>
-<html lang="en-us"><head><meta charset="utf-8">
-<meta http-equiv="content-type" content="text/html">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title itemprop="name">Heroku&#39;s Just Linux | E.J. Finneran</title>
-<meta property="og:title" content="Heroku&#39;s Just Linux | E.J. Finneran" />
-<meta name="twitter:title" content="Heroku&#39;s Just Linux | E.J. Finneran" />
-<meta itemprop="name" content="Heroku&#39;s Just Linux | E.J. Finneran" />
-<meta name="application-name" content="Heroku&#39;s Just Linux | E.J. Finneran" />
-<meta property="og:site_name" content="Debanwita Mahato" />
-
-<meta name="description" content="Minimal Hugo blog theme with light and dark mode support">
-<meta itemprop="description" content="Minimal Hugo blog theme with light and dark mode support" />
-<meta property="og:description" content="Minimal Hugo blog theme with light and dark mode support" />
-<meta name="twitter:description" content="Minimal Hugo blog theme with light and dark mode support" />
-
-<meta property="og:locale" content="en-us" />
-<meta name="language" content="en-us" />
-
-  <link rel="alternate" hreflang="en" href="https://finneran.xyz/posts/herokus-just-linux/" title="" />
-
-
-
-
-
-    
-    
-    
-
-    <meta property="og:type" content="article" />
-    <meta property="og:article:published_time" content=2014-08-14T00:00:00-0700 />
-    <meta property="article:published_time" content=2014-08-14T00:00:00-0700 />
-    <meta property="og:url" content="https://finneran.xyz/posts/herokus-just-linux/" />
-
-    
-    <meta property="og:article:author" content="E.J. Finneran" />
-    <meta property="article:author" content="E.J. Finneran" />
-    <meta name="author" content="E.J. Finneran" />
-    
-    
-
-    
-
-    <script defer type="application/ld+json">
-    {
-        "@context": "http://schema.org",
-        "@type": "Article",
-        "headline": "Heroku's Just Linux",
-        "author": {
-        "@type": "Person",
-        "name": ""
-        },
-        "datePublished": "2014-08-14",
-        "description": "",
-        "wordCount":  715 ,
-        "mainEntityOfPage": "True",
-        "dateModified": "2014-08-14",
-        "image": {
-        "@type": "imageObject",
-        "url": ""
-        },
-        "publisher": {
-        "@type": "Organization",
-        "name": "E.J. Finneran"
-        }
-    }
-    </script>
-
-
-<meta name="generator" content="Hugo 0.143.1">
-
-    
-    <meta property="og:url" content="https://finneran.xyz/posts/herokus-just-linux/">
-  <meta property="og:site_name" content="E.J. Finneran">
-  <meta property="og:title" content="Heroku&#39;s Just Linux">
-  <meta property="og:description" content="Heroku is often treated as blackbox into which a developer puts code and out pops a running web server. There is certainly a good amount of magic that goes into it but keep in mind at the end of the day, those Dynos are just custom Ubuntu instances.">
-  <meta property="og:locale" content="en_us">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2014-08-14T00:00:00-07:00">
-    <meta property="article:modified_time" content="2014-08-14T00:00:00-07:00">
-
-
-    
-    
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Heroku&#39;s Just Linux">
-  <meta name="twitter:description" content="Heroku is often treated as blackbox into which a developer puts code and out pops a running web server. There is certainly a good amount of magic that goes into it but keep in mind at the end of the day, those Dynos are just custom Ubuntu instances.">
-
-
-    
-
-    <link rel="canonical" href="https://finneran.xyz/posts/herokus-just-linux/">
-    <link href="/style.min.e390ba7da26222f4dc42a349955d76dbbe44e5ce2535a43de5a70633a0a9ec3c.css" rel="stylesheet">
-    <link href="/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
-
-    
-    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
-    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg">
-    <link rel="shortcut icon" href="/favicon.ico">
-
-
-
-
-<link rel="manifest" href="https://finneran.xyz/site.webmanifest">
-
-<meta name="msapplication-config" content="/browserconfig.xml">
-<meta name="msapplication-TileColor" content="#2d89ef">
-<meta name="theme-color" content="#434648">
-
-    
-    <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg">
-
-    
-    
-    
-</head>
-<body data-theme = "dark" class="notransition">
-
-<script src="/js/theme.min.8961c317c5b88b953fe27525839672c9343f1058ab044696ca225656c8ba2ab0.js" integrity="sha256-iWHDF8W4i5U/4nUlg5ZyyTQ/EFirBEaWyiJWVsi6KrA="></script>
-
-<div class="navbar" role="navigation">
-    <nav class="menu" aria-label="Main Navigation">
-        <a href="https://finneran.xyz/" class="logo">
-            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" 
-viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
-stroke-linejoin="round" class="feather feather-home">
-<title></title>
-<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-<polyline points="9 22 9 12 15 12 15 22"></polyline>
-</svg>
-        </a>
-        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
-        <label for="menu-trigger">
-            <span class="menu-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" stroke="currentColor" fill="none" viewBox="0 0 14 14"><title>Menu</title><path stroke-linecap="round" stroke-linejoin="round" d="M10.595 7L3.40726 7"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 3.51488L3.49301 3.51488"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 10.4851H3.49301"></path><path stroke-linecap="round" stroke-linejoin="round" d="M0.5 12.5V1.5C0.5 0.947715 0.947715 0.5 1.5 0.5H12.5C13.0523 0.5 13.5 0.947715 13.5 1.5V12.5C13.5 13.0523 13.0523 13.5 12.5 13.5H1.5C0.947715 13.5 0.5 13.0523 0.5 12.5Z"></path></svg>
-            </span>
-        </label>
-
-        <div class="trigger">
-            <ul class="trigger-container">
-                
-                
-                <li>
-                    <a class="menu-link " href="/">
-                        Home
-                    </a>
-                    
-                </li>
-                
-                <li>
-                    <a class="menu-link active" href="/posts/">
-                        Posts
-                    </a>
-                    
-                </li>
-                
-                <li>
-                    <a class="menu-link " href="/about/">
-                        About
-                    </a>
-                    
-                </li>
-                
-                <li class="menu-separator">
-                    <span>|</span>
-                </li>
-                
-                
-            </ul>
-            <a id="mode" href="#">
-                <svg xmlns="http://www.w3.org/2000/svg" class="mode-sunny" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
-<title>LIGHT</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
-                <svg xmlns="http://www.w3.org/2000/svg" class="mode-moon" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
-<title>DARK</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
-            </a>
-        </div>
-    </nav>
-</div>
-
-<div class="wrapper post">
-    <main class="page-content" aria-label="Content">
-        <article>
-            <header class="header">
-                <h1 class="header-title">Heroku&#39;s Just Linux</h1>
-                
-                
-                
-                <div class="post-meta">
-                    <time datetime="2014-08-14T00:00:00-07:00" itemprop="datePublished"> Aug 14, 2014 </time>
-                </div>
-                
-            </header>
-            
-            <div class="page-content">
-                <p>Heroku is often treated as blackbox into which a developer puts code and out pops a running web server. There is certainly a good amount of magic that goes into it but keep in mind at the end of the day, those Dynos are just custom Ubuntu instances.</p>
-<h2 id="when-is-it-linux">When Is It Linux?</h2>
-<p>Did you know can do this?</p>
-<pre tabindex="0"><code>~ $ heroku run bash
+<!doctype html><html lang=en-us><head><meta charset=utf-8><meta http-equiv=content-type content="text/html"><meta name=viewport content="width=device-width,initial-scale=1"><title itemprop=name>Heroku's Just Linux | E.J. Finneran</title><meta property="og:title" content="Heroku's Just Linux | E.J. Finneran"><meta name=twitter:title content="Heroku's Just Linux | E.J. Finneran"><meta itemprop=name content="Heroku's Just Linux | E.J. Finneran"><meta name=application-name content="Heroku's Just Linux | E.J. Finneran"><meta property="og:site_name" content="Debanwita Mahato"><meta name=description content="Minimal Hugo blog theme with light and dark mode support"><meta itemprop=description content="Minimal Hugo blog theme with light and dark mode support"><meta property="og:description" content="Minimal Hugo blog theme with light and dark mode support"><meta name=twitter:description content="Minimal Hugo blog theme with light and dark mode support"><meta property="og:locale" content="en-us"><meta name=language content="en-us"><link rel=alternate hreflang=en href=https://finneran.xyz/posts/herokus-just-linux/ title><meta property="og:type" content="article"><meta property="og:article:published_time" content=2014-08-14T00:00:00-0700><meta property="article:published_time" content=2014-08-14T00:00:00-0700><meta property="og:url" content="https://finneran.xyz/posts/herokus-just-linux/"><meta property="og:article:author" content="E.J. Finneran"><meta property="article:author" content="E.J. Finneran"><meta name=author content="E.J. Finneran"><script defer type=application/ld+json>{"@context":"http://schema.org","@type":"Article","headline":"Heroku's Just Linux","author":{"@type":"Person","name":""},"datePublished":"2014-08-14","description":"","wordCount":715,"mainEntityOfPage":"True","dateModified":"2014-08-14","image":{"@type":"imageObject","url":""},"publisher":{"@type":"Organization","name":"E.J. Finneran"}}</script><meta name=generator content="Hugo 0.151.0"><meta property="og:url" content="https://finneran.xyz/posts/herokus-just-linux/"><meta property="og:site_name" content="E.J. Finneran"><meta property="og:title" content="Heroku's Just Linux"><meta property="og:description" content="Heroku is often treated as blackbox into which a developer puts code and out pops a running web server. There is certainly a good amount of magic that goes into it but keep in mind at the end of the day, those Dynos are just custom Ubuntu instances."><meta property="og:locale" content="en_us"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2014-08-14T00:00:00-07:00"><meta property="article:modified_time" content="2014-08-14T00:00:00-07:00"><meta name=twitter:card content="summary"><meta name=twitter:title content="Heroku's Just Linux"><meta name=twitter:description content="Heroku is often treated as blackbox into which a developer puts code and out pops a running web server. There is certainly a good amount of magic that goes into it but keep in mind at the end of the day, those Dynos are just custom Ubuntu instances."><link rel=canonical href=https://finneran.xyz/posts/herokus-just-linux/><link href=/style.min.e390ba7da26222f4dc42a349955d76dbbe44e5ce2535a43de5a70633a0a9ec3c.css rel=stylesheet><link href=/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css rel=stylesheet><link rel=apple-touch-icon sizes=180x180 href=/icons/apple-touch-icon.png><link rel=icon type=image/png sizes=32x32 href=/icons/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/icons/favicon-16x16.png><link rel=mask-icon href=/icons/safari-pinned-tab.svg><link rel="shortcut icon" href=/favicon.ico><link rel=manifest href=https://finneran.xyz/site.webmanifest><meta name=msapplication-config content="/browserconfig.xml"><meta name=msapplication-TileColor content="#2d89ef"><meta name=theme-color content="#434648"><link rel=icon type=image/svg+xml href=/icons/favicon.svg></head><body data-theme=dark class=notransition><script src=/js/theme.min.8961c317c5b88b953fe27525839672c9343f1058ab044696ca225656c8ba2ab0.js integrity="sha256-iWHDF8W4i5U/4nUlg5ZyyTQ/EFirBEaWyiJWVsi6KrA="></script><div class=navbar role=navigation><nav class=menu aria-label="Main Navigation"><a href=https://finneran.xyz/ class=logo><svg width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><title/><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+</a><input type=checkbox id=menu-trigger class=menu-trigger>
+<label for=menu-trigger><span class=menu-icon><svg width="25" height="25" stroke="currentColor" fill="none" viewBox="0 0 14 14"><title>Menu</title><path stroke-linecap="round" stroke-linejoin="round" d="M10.595 7H3.40726"/><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 3.51488H3.49301"/><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 10.4851H3.49301"/><path stroke-linecap="round" stroke-linejoin="round" d="M.5 12.5V1.5c0-.552285.447715-1 1-1h11C13.0523.5 13.5.947715 13.5 1.5v11C13.5 13.0523 13.0523 13.5 12.5 13.5H1.5C.947715 13.5.5 13.0523.5 12.5z"/></svg></span></label><div class=trigger><ul class=trigger-container><li><a class=menu-link href=/>Home</a></li><li><a class="menu-link active" href=/posts/>Posts</a></li><li><a class=menu-link href=/about/>About</a></li><li class=menu-separator><span>|</span></li></ul><a id=mode href=#><svg class="mode-sunny" width="21" height="21" viewBox="0 0 14 14" stroke-width="1"><title>LIGHT</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="7" y1=".5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1=".5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g></svg>
+<svg class="mode-moon" width="21" height="21" viewBox="0 0 14 14" stroke-width="1"><title>DARK</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="7" y1=".5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1=".5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g></svg></a></div></nav></div><div class="wrapper post"><main class=page-content aria-label=Content><article><header class=header><h1 class=header-title>Heroku's Just Linux</h1><div class=post-meta><time datetime=2014-08-14T00:00:00-07:00 itemprop=datePublished>Aug 14, 2014</time></div></header><div class=page-content><p>Heroku is often treated as blackbox into which a developer puts code and out pops a running web server. There is certainly a good amount of magic that goes into it but keep in mind at the end of the day, those Dynos are just custom Ubuntu instances.</p><h2 id=when-is-it-linux>When Is It Linux?</h2><p>Did you know can do this?</p><pre tabindex=0><code>~ $ heroku run bash
 Running `bash` attached to terminal... up, run.5617
 
 ~ $ lsb_release -a
@@ -210,80 +12,59 @@ Release:  10.04
 
 ~ $ uptime
  20:50:25 up 35 days, 23:48,  0 users,  load average: 13.64, 9.56, 8.78
-</code></pre><p>Why does it matter? Because sometimes programming languages are slow (Ruby). Sometimes what you need to do has already been written in C and left behind on standard Linux distrutions waiting for you to use them.</p>
-<p>For example, say we wanted to take a rather large CSV, sort it by the 2nd then 1st columns and return the first row.</p>
-<p>I was able to find an 8MB CSV from baseball-databank.org. Here is an example Sinatra app:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ruby" data-lang="ruby"><span class="line"><span class="cl"><span class="nb">require</span> <span class="s1">&#39;csv&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="nb">require</span> <span class="s1">&#39;benchmark&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="nb">require</span> <span class="s1">&#39;sinatra/base&#39;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">HerokuTest</span> <span class="o">&lt;</span> <span class="no">Sinatra</span><span class="o">::</span><span class="no">Base</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">mem_usage</span>
-</span></span><span class="line"><span class="cl">    <span class="sb">`ps -o rss=  </span><span class="si">#{</span><span class="no">Process</span><span class="o">.</span><span class="n">pid</span><span class="si">}</span><span class="sb">`</span><span class="o">.</span><span class="n">to_i</span>
-</span></span><span class="line"><span class="cl">  <span class="k">end</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">results</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">mem_total</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="n">output</span> <span class="o">=</span> <span class="o">[]</span>
-</span></span><span class="line"><span class="cl">    <span class="n">output</span> <span class="o">&lt;&lt;</span> <span class="s2">&#34;Finished in </span><span class="si">#{</span><span class="n">time</span><span class="o">.</span><span class="n">to_s</span><span class="si">}</span><span class="s2">&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="n">output</span> <span class="o">&lt;&lt;</span> <span class="s2">&#34;Memory growth: </span><span class="si">#{</span><span class="n">mem_total</span><span class="si">}</span><span class="s2">&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="n">output</span> <span class="o">&lt;&lt;</span> <span class="s2">&#34;First sorted line:&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="n">output</span> <span class="o">&lt;&lt;</span> <span class="n">line</span> <span class="o">+</span> <span class="s2">&#34;</span><span class="se">\n</span><span class="s2">&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="n">output</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&#34;</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">  <span class="k">end</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="n">get</span><span class="p">(</span><span class="s2">&#34;/linux_sort&#34;</span><span class="p">)</span> <span class="k">do</span>
-</span></span><span class="line"><span class="cl">    <span class="n">mem_start</span> <span class="o">=</span> <span class="n">mem_usage</span>
-</span></span><span class="line"><span class="cl">    <span class="n">time</span> <span class="o">=</span> <span class="no">Benchmark</span><span class="o">.</span><span class="n">measure</span> <span class="k">do</span>
-</span></span><span class="line"><span class="cl">      <span class="c1"># Splitting on commas isn&#39;t proper CSV parsing but it works for our purposes here</span>
-</span></span><span class="line"><span class="cl">      <span class="nb">system</span><span class="p">(</span><span class="s2">&#34;sort -g --field-separator=&#39;,&#39; --key=2,1 fielding.csv &gt; sorted.csv&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="k">end</span><span class="o">.</span><span class="n">real</span>
-</span></span><span class="line"><span class="cl">    <span class="no">File</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&#34;sorted.csv&#34;</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">f</span><span class="o">|</span>
-</span></span><span class="line"><span class="cl">      <span class="n">mem_end</span> <span class="o">=</span> <span class="n">mem_usage</span>
-</span></span><span class="line"><span class="cl">      <span class="n">results</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">mem_end</span> <span class="o">-</span> <span class="n">mem_start</span><span class="p">,</span> <span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="k">end</span>
-</span></span><span class="line"><span class="cl">  <span class="k">end</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="n">get</span><span class="p">(</span><span class="s2">&#34;/ruby_sort&#34;</span><span class="p">)</span> <span class="k">do</span>
-</span></span><span class="line"><span class="cl">    <span class="n">mem_start</span> <span class="o">=</span> <span class="n">mem_usage</span>
-</span></span><span class="line"><span class="cl">    <span class="n">time</span> <span class="o">=</span> <span class="no">Benchmark</span><span class="o">.</span><span class="n">measure</span> <span class="k">do</span>
-</span></span><span class="line"><span class="cl">      <span class="vi">@file</span> <span class="o">=</span> <span class="no">CSV</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="no">File</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s2">&#34;fielding.csv&#34;</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">      <span class="vi">@file</span><span class="o">.</span><span class="n">sort_by!</span> <span class="p">{</span><span class="o">|</span><span class="n">b</span><span class="o">|</span> <span class="n">b</span><span class="o">.</span><span class="n">values_at</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span> <span class="p">}</span>
-</span></span><span class="line"><span class="cl">    <span class="k">end</span><span class="o">.</span><span class="n">real</span>
-</span></span><span class="line"><span class="cl">    <span class="n">mem_end</span> <span class="o">=</span> <span class="n">mem_usage</span>
-</span></span><span class="line"><span class="cl">    <span class="n">results</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">mem_end</span> <span class="o">-</span> <span class="n">mem_start</span><span class="p">,</span> <span class="vi">@file</span><span class="o">.</span><span class="n">first</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&#34;,&#34;</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">  <span class="k">end</span>
-</span></span><span class="line"><span class="cl"><span class="k">end</span>
-</span></span></code></pre></div><p>The app can be checked out at <a href="https://github.com/ejfinneran/herokus-just-unix">https://github.com/ejfinneran/herokus-just-unix</a>.</p>
-<p>So, we&rsquo;re doing the same thing in each endpoint. Sorting the file and returning the first line along with the stats about the request.</p>
-<p>These results are running on Ruby 2.1.2 on a standard 1X Cedar stack Dyno.</p>
-<p>Let&rsquo;s see what the results are:</p>
-<h3 id="ruby-sort">Ruby Sort</h3>
-<pre tabindex="0"><code>$ curl http://murmuring-castle-8562.herokuapp.com/ruby_sort
+</code></pre><p>Why does it matter? Because sometimes programming languages are slow (Ruby). Sometimes what you need to do has already been written in C and left behind on standard Linux distrutions waiting for you to use them.</p><p>For example, say we wanted to take a rather large CSV, sort it by the 2nd then 1st columns and return the first row.</p><p>I was able to find an 8MB CSV from baseball-databank.org. Here is an example Sinatra app:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-ruby data-lang=ruby><span class=line><span class=cl><span class=nb>require</span> <span class=s1>&#39;csv&#39;</span>
+</span></span><span class=line><span class=cl><span class=nb>require</span> <span class=s1>&#39;benchmark&#39;</span>
+</span></span><span class=line><span class=cl><span class=nb>require</span> <span class=s1>&#39;sinatra/base&#39;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>class</span> <span class=nc>HerokuTest</span> <span class=o>&lt;</span> <span class=no>Sinatra</span><span class=o>::</span><span class=no>Base</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=k>def</span> <span class=nf>mem_usage</span>
+</span></span><span class=line><span class=cl>    <span class=sb>`ps -o rss=  </span><span class=si>#{</span><span class=no>Process</span><span class=o>.</span><span class=n>pid</span><span class=si>}</span><span class=sb>`</span><span class=o>.</span><span class=n>to_i</span>
+</span></span><span class=line><span class=cl>  <span class=k>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=k>def</span> <span class=nf>results</span><span class=p>(</span><span class=n>time</span><span class=p>,</span> <span class=n>mem_total</span><span class=p>,</span> <span class=n>line</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=n>output</span> <span class=o>=</span> <span class=o>[]</span>
+</span></span><span class=line><span class=cl>    <span class=n>output</span> <span class=o>&lt;&lt;</span> <span class=s2>&#34;Finished in </span><span class=si>#{</span><span class=n>time</span><span class=o>.</span><span class=n>to_s</span><span class=si>}</span><span class=s2>&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=n>output</span> <span class=o>&lt;&lt;</span> <span class=s2>&#34;Memory growth: </span><span class=si>#{</span><span class=n>mem_total</span><span class=si>}</span><span class=s2>&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=n>output</span> <span class=o>&lt;&lt;</span> <span class=s2>&#34;First sorted line:&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=n>output</span> <span class=o>&lt;&lt;</span> <span class=n>line</span> <span class=o>+</span> <span class=s2>&#34;</span><span class=se>\n</span><span class=s2>&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=n>output</span><span class=o>.</span><span class=n>join</span><span class=p>(</span><span class=s2>&#34;</span><span class=se>\n</span><span class=s2>&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>  <span class=k>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=n>get</span><span class=p>(</span><span class=s2>&#34;/linux_sort&#34;</span><span class=p>)</span> <span class=k>do</span>
+</span></span><span class=line><span class=cl>    <span class=n>mem_start</span> <span class=o>=</span> <span class=n>mem_usage</span>
+</span></span><span class=line><span class=cl>    <span class=n>time</span> <span class=o>=</span> <span class=no>Benchmark</span><span class=o>.</span><span class=n>measure</span> <span class=k>do</span>
+</span></span><span class=line><span class=cl>      <span class=c1># Splitting on commas isn&#39;t proper CSV parsing but it works for our purposes here</span>
+</span></span><span class=line><span class=cl>      <span class=nb>system</span><span class=p>(</span><span class=s2>&#34;sort -g --field-separator=&#39;,&#39; --key=2,1 fielding.csv &gt; sorted.csv&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=k>end</span><span class=o>.</span><span class=n>real</span>
+</span></span><span class=line><span class=cl>    <span class=no>File</span><span class=o>.</span><span class=n>open</span><span class=p>(</span><span class=s2>&#34;sorted.csv&#34;</span><span class=p>)</span> <span class=k>do</span> <span class=o>|</span><span class=n>f</span><span class=o>|</span>
+</span></span><span class=line><span class=cl>      <span class=n>mem_end</span> <span class=o>=</span> <span class=n>mem_usage</span>
+</span></span><span class=line><span class=cl>      <span class=n>results</span><span class=p>(</span><span class=n>time</span><span class=p>,</span> <span class=n>mem_end</span> <span class=o>-</span> <span class=n>mem_start</span><span class=p>,</span> <span class=n>f</span><span class=o>.</span><span class=n>readline</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=k>end</span>
+</span></span><span class=line><span class=cl>  <span class=k>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=n>get</span><span class=p>(</span><span class=s2>&#34;/ruby_sort&#34;</span><span class=p>)</span> <span class=k>do</span>
+</span></span><span class=line><span class=cl>    <span class=n>mem_start</span> <span class=o>=</span> <span class=n>mem_usage</span>
+</span></span><span class=line><span class=cl>    <span class=n>time</span> <span class=o>=</span> <span class=no>Benchmark</span><span class=o>.</span><span class=n>measure</span> <span class=k>do</span>
+</span></span><span class=line><span class=cl>      <span class=vi>@file</span> <span class=o>=</span> <span class=no>CSV</span><span class=o>.</span><span class=n>parse</span><span class=p>(</span><span class=no>File</span><span class=o>.</span><span class=n>read</span><span class=p>(</span><span class=s2>&#34;fielding.csv&#34;</span><span class=p>))</span>
+</span></span><span class=line><span class=cl>      <span class=vi>@file</span><span class=o>.</span><span class=n>sort_by!</span> <span class=p>{</span><span class=o>|</span><span class=n>b</span><span class=o>|</span> <span class=n>b</span><span class=o>.</span><span class=n>values_at</span><span class=p>(</span><span class=mi>1</span><span class=p>,</span><span class=mi>0</span><span class=p>)</span> <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=k>end</span><span class=o>.</span><span class=n>real</span>
+</span></span><span class=line><span class=cl>    <span class=n>mem_end</span> <span class=o>=</span> <span class=n>mem_usage</span>
+</span></span><span class=line><span class=cl>    <span class=n>results</span><span class=p>(</span><span class=n>time</span><span class=p>,</span> <span class=n>mem_end</span> <span class=o>-</span> <span class=n>mem_start</span><span class=p>,</span> <span class=vi>@file</span><span class=o>.</span><span class=n>first</span><span class=o>.</span><span class=n>join</span><span class=p>(</span><span class=s2>&#34;,&#34;</span><span class=p>))</span>
+</span></span><span class=line><span class=cl>  <span class=k>end</span>
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span></code></pre></div><p>The app can be checked out at <a href=https://github.com/ejfinneran/herokus-just-unix>https://github.com/ejfinneran/herokus-just-unix</a>.</p><p>So, we&rsquo;re doing the same thing in each endpoint. Sorting the file and returning the first line along with the stats about the request.</p><p>These results are running on Ruby 2.1.2 on a standard 1X Cedar stack Dyno.</p><p>Let&rsquo;s see what the results are:</p><h3 id=ruby-sort>Ruby Sort</h3><pre tabindex=0><code>$ curl http://murmuring-castle-8562.herokuapp.com/ruby_sort
 Finished in 5.419442253
 Memory growth: 188716
 First sorted line:
 abercda01,1871,1,TRO,NA,SS,1,,,1,3,2,0,,,,,
-</code></pre><p>So it took 5.4 seconds and grew our memory footprint by ~188k. Subsequent requests don&rsquo;t grow memory nearly as much but if we were parsing a different file in each request, you&rsquo;d start seeing much worse memory growth.</p>
-<h3 id="linux-sort">Linux Sort</h3>
-<pre tabindex="0"><code>$ curl http://murmuring-castle-8562.herokuapp.com/unix_sort
+</code></pre><p>So it took 5.4 seconds and grew our memory footprint by ~188k. Subsequent requests don&rsquo;t grow memory nearly as much but if we were parsing a different file in each request, you&rsquo;d start seeing much worse memory growth.</p><h3 id=linux-sort>Linux Sort</h3><pre tabindex=0><code>$ curl http://murmuring-castle-8562.herokuapp.com/unix_sort
 Finished in 0.84406482
 Memory growth: 12
 First sorted line:
 abercda01,1871,1,TRO,NA,SS,1,,,1,3,2,0,,,,,
-</code></pre><p>Wow. The sort binary installed on the Dyno did the same job in less than one second and only added 12 bytes to the memory footprint.</p>
-<p>Keep this in mind even outside of Heroku. If you can drop down into those Linux tools to process data in large batches, you will save quite a bit of processing time and memory overhead.</p>
-<p>This also means you can write a custom app that doesn&rsquo;t something simple like sort in a language like Go and shell out to it. We&rsquo;ve used that method at Cloudability to handle fetching and parsing very large files outside of Ruby.</p>
-<h2 id="when-is-it-not-linux">When Is It Not Linux?</h2>
-<h3 id="stdout-vs-stderr">STDOUT vs STDERR</h3>
-<p>Heroku munges STDERR into STDOUT when using the run command so you can&rsquo;t use standard Linux patterns for filtering output.</p>
-<pre tabindex="0"><code>heroku run &#34;ls not_real_file&#34; &amp;2&gt;/dev/null
-</code></pre><p>This issue is documented here if you want to track it&rsquo;s progress.</p>
-<p><a href="https://github.com/heroku/heroku/issues/585">https://github.com/heroku/heroku/issues/585</a></p>
-<p>Output truncation</p>
-<p>Heroku also truncates output of the run command seemingly at random.</p>
-<p>We can run <code>nl</code> on the server and see that this CSV is 164,898 lines.</p>
-<pre tabindex="0"><code>$ heroku run &#34;nl fielding.csv | tail&#34;
+</code></pre><p>Wow. The sort binary installed on the Dyno did the same job in less than one second and only added 12 bytes to the memory footprint.</p><p>Keep this in mind even outside of Heroku. If you can drop down into those Linux tools to process data in large batches, you will save quite a bit of processing time and memory overhead.</p><p>This also means you can write a custom app that doesn&rsquo;t something simple like sort in a language like Go and shell out to it. We&rsquo;ve used that method at Cloudability to handle fetching and parsing very large files outside of Ruby.</p><h2 id=when-is-it-not-linux>When Is It Not Linux?</h2><h3 id=stdout-vs-stderr>STDOUT vs STDERR</h3><p>Heroku munges STDERR into STDOUT when using the run command so you can&rsquo;t use standard Linux patterns for filtering output.</p><pre tabindex=0><code>heroku run &#34;ls not_real_file&#34; &amp;2&gt;/dev/null
+</code></pre><p>This issue is documented here if you want to track it&rsquo;s progress.</p><p><a href=https://github.com/heroku/heroku/issues/585>https://github.com/heroku/heroku/issues/585</a></p><p>Output truncation</p><p>Heroku also truncates output of the run command seemingly at random.</p><p>We can run <code>nl</code> on the server and see that this CSV is 164,898 lines.</p><pre tabindex=0><code>$ heroku run &#34;nl fielding.csv | tail&#34;
 Running `nl fielding.csv | tail` attached to terminal... up, run.9082
 164889  zuverge01,1955,2,BAL,AL,P,28,5,259,7,19,3,2,,,,,
 164890  zuverge01,1956,1,BAL,AL,P,62,0,292,8,17,0,2,,,,,
@@ -295,8 +76,7 @@ Running `nl fielding.csv | tail` attached to terminal... up, run.9082
 164896  zwilldu01,1915,1,CHF,FL,1B,3,,,3,0,0,0,,,,,
 164897  zwilldu01,1915,1,CHF,FL,OF,148,,,356,20,8,6,,,,,
 164898  zwilldu01,1916,1,CHN,NL,OF,10,,,11,0,0,0,,,,,
-</code></pre><p>However, if we try to cat the file back to our machine, we see that we get cut off between 3800 and 5000 line mark.</p>
-<pre tabindex="0"><code>$ heroku run &#34;cat fielding.csv&#34; | nl | tail
+</code></pre><p>However, if we try to cat the file back to our machine, we see that we get cut off between 3800 and 5000 line mark.</p><pre tabindex=0><code>$ heroku run &#34;cat fielding.csv&#34; | nl | tail
  5077 ayalabo01,1998,1,SEA,AL,P,62,0,226,8,8,5,1,,,,,
  5078 ayalabo01,1999,1,MON,NL,P,53,0,198,7,10,4,1,,,,,
  5079 ayalabo01,1999,2,CHN,NL,P,13,0,48,1,2,0,0,,,,,
@@ -306,7 +86,7 @@ Running `nl fielding.csv | tail` attached to terminal... up, run.9082
  5083 ayalalu01,2007,1,WAS,NL,P,44,0,127,3,8,0,0,,,,,
  5084 ayalalu01,2008,1,WAS,NL,P,62,0,173,1,10,0,1,,,,,
  5085 ayalalu01,2008,2,NYN,NL,P,19,0,54,1,2,0,0,,,,,
-</code></pre><pre tabindex="0"><code>$ heroku run &#34;cat fielding.csv&#34; | nl | tail
+</code></pre><pre tabindex=0><code>$ heroku run &#34;cat fielding.csv&#34; | nl | tail
  3886 aparilu01,1964,1,BAL,AL,SS,145,144,3815,260,437,15,98,,,,,
  3887 aparilu01,1965,1,BAL,AL,SS,141,139,3809,238,439,20,87,,,,,
  3888 aparilu01,1966,1,BAL,AL,SS,151,151,4098,303,441,17,104,,,,,
@@ -317,30 +97,5 @@ Running `nl fielding.csv | tail` attached to terminal... up, run.9082
  3893 aparilu01,1971,1,BOS,AL,SS,121,121,3171,194,338,16,56,,,,,
  3894 aparilu01,1972,1,BOS,AL,SS,109,109,2807,183,304,16,54,,,,,
  3895 aparilu01,1973,1,BOS,AL,SS,132,129,3314,190,404%
-</code></pre><p>Documented here: <a href="https://github.com/heroku/heroku/issues/674">https://github.com/heroku/heroku/issues/674</a></p>
-            </div>
-        </article></main>
-</div>
-<footer class="footer">
-    <span class="footer_item"> </span>
-    &nbsp;
-
-    <small class="footer_copyright">
-        © 2025 E.J. Finneran.
-        
-    </small>
-</footer>
-
-
-
-
-
-
-
-    
-    <script src="https://finneran.xyz/js/main.min.4ee188e1744c19816e95a540b2650ed9f033ea0371e74eac8e717355cfca8741.js" integrity="sha256-TuGI4XRMGYFulaVAsmUO2fAz6gNx506sjnFzVc/Kh0E="></script>
-
-    
-
-</body>
-</html>
+</code></pre><p>Documented here: <a href=https://github.com/heroku/heroku/issues/674>https://github.com/heroku/heroku/issues/674</a></p></div></article></main></div><footer class=footer><span class=footer_item></span>&nbsp;
+<small class=footer_copyright>© 2025 E.J. Finneran.</small></footer><script src=https://finneran.xyz/js/main.min.4ee188e1744c19816e95a540b2650ed9f033ea0371e74eac8e717355cfca8741.js integrity="sha256-TuGI4XRMGYFulaVAsmUO2fAz6gNx506sjnFzVc/Kh0E="></script></body></html>
